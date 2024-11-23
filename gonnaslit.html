@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meowb.in/gonnaslit</title>
+    <link rel="stylesheet" href="people.css">
+</head>
+<body>
+    <video id="bg-video" autoplay loop muted playsinline>
+        <source src="BACKGROUND_1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <div class="container">
+        <div class="profile-card">
+            <img src="/people/gonnaslit.gif" alt="Profile Picture" class="profile-img">
+            <h1>Gonnaslit</h1>
+            <p class="bio">This world is cruel isn't it</p>
+            <div class="links">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let audioPlayed = false;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const audio = document.getElementById('bg-audio');
+            const video = document.getElementById('bg-video');
+            video.muted = false;
+            video.play();
+
+            document.body.addEventListener('click', function () {
+                if (!audioPlayed) {
+                    audio.play();
+                    audioPlayed = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
